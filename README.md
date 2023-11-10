@@ -6,6 +6,6 @@ A Raspberry Pi agrega os dados e os disponibiliza através de uma API RESTful, q
 
 O objetivo final do sistema é oferecer aos usuários uma maneira conveniente e eficiente de manter a saúde de seus jardins, aproveitando as vantagens dos dispositivos IoT (Internet das Coisas) para coleta e análise de dados. Este tipo de aplicativo tem potencial para ser expandido com funcionalidades adicionais, como automação de irrigação, detecção de pragas e recomendações de cuidados com as plantas, transformando a jardinagem em uma experiência mais gerenciável e científica.
 
-![img](https://github.com/Markoro-Original/SmartGarden/assets/80073676/9dcf16bb-6058-4a5e-991f-ef7e5543460c)
-
+<div align="center">
 <img src="https://github.com/Markoro-Original/SmartGarden/assets/80073676/9dcf16bb-6058-4a5e-991f-ef7e5543460c.png" alt="Logo da Minha Empresa">
+</div>
