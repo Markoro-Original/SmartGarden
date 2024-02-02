@@ -19,7 +19,7 @@ export class MqttService {
     private topicToSubscribe ='teste/1'
 
     constructor() {
-        this.client = mqtt.connect("mqtt://localhost:1884")
+        this.client = mqtt.connect("mqtt://ubuntu@ec2-52-206-249-223.compute-1.amazonaws.com:1884")
         this.connect();
     }
 
