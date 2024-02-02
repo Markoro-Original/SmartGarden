@@ -1,0 +1,92 @@
+.container-garden-list {
+    margin-top: 25px;
+    padding: 0px 70px 0px 70px;
+}
+
+.container-garden-list .container-garden-list_header {
+    font-weight: 700;
+    font-size: 23px;
+    padding-left: 48px;
+    margin-bottom: 13px;
+    color: #737373;
+}
+
+.container-garden-list .container-garden-list_data {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container-garden-list .container-garden-list_data .container-garden-list_img-description {
+    width: 250px;
+    height: 230px;
+    background: #4D6C7A;
+    color: #fff;
+    text-align: center;
+    border-radius: 37px;
+    font-weight: 500;
+    transition: transform 0.5s;
+}
+
+.container-garden-list .container-garden-list_data .container-garden-list_img-description:hover {
+    cursor: pointer;
+    transform: translateY(-8px);
+}
+
+.container-garden-list_img-description:nth-child(1),
+.container-garden-list_img-description:nth-child(2),
+.container-garden-list_img-description:nth-child(3) {
+    margin-right: 15px;
+}
+
+.container-garden-list .container-garden-list_data .container-garden-list_img-description .container-garden-list_img img {
+    height: 180px;
+    width: 100%;
+    border-radius: 35px;
+    margin-bottom: 8px;
+}
+
+@media screen and (max-width: 768px) {
+
+    .container-garden-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .container-garden-list .container-garden-list_header {
+        font-size: 20px !important;
+    }
+
+    .container-garden-list .container-garden-list_data {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 15px;
+    }
+
+    .container-garden-list_data-container {
+        width: 100%;
+        margin: auto;
+    }
+
+    .container-garden-list .container-garden-list_data .container-garden-list_img-description {
+        width: 100%;
+        height: 180px;
+    }
+
+    .container-garden-list .container-garden-list_data .container-garden-list_img-description .container-garden-list_img img {
+        height: 8rem;
+        margin-bottom: 4px;
+    }
+
+    .container-garden-list_img-description:nth-child(1),
+    .container-garden-list_img-description:nth-child(2),
+    .container-garden-list_img-description:nth-child(3) {
+        margin-right: 0;
+    }
+
+    .container-garden-list_description {
+        font-size: 12px !important;
+    }
+    
+}

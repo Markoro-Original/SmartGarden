@@ -1,0 +1,55 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id       Int      @id @default(autoincrement())
+  email    String   @unique
+  name     String?
+  password String
+  gardens  Garden[]
+}
+
+model Garden {
+  id         Int          @id @default(autoincrement())
+  title      String
+  topic      String
+  owner      User         @relation(fields: [ownerId], references: [id])
+  ownerId    Int
+  esps       Esp[]
+  lastEdit   DateTime?
+  Simulation Simulation[]
+}
+
+model Esp {
+  id       Int      @id @default(autoincrement())
+  name     String
+  mac      String
+  ssid     String
+  garden   Garden   @relation(fields: [gardenId], references: [id])
+  gardenId Int
+  sensors  Sensor[]
+}
+
+model Sensor {
+  id    Int    @id @default(autoincrement())
+  name  String
+  type  String
+  value String
+  esp   Esp    @relation(fields: [espId], references: [id])
+  espId Int
+}
+
+model Simulation {
+  id        Int     @id @default(autoincrement())
+  name      String
+  isRunning Boolean
+  data      String
+  garden    Garden  @relation(fields: [gardenId], references: [id])
+  gardenId  Int
+}

@@ -1,0 +1,40 @@
+.container-garden-header {
+    padding: 0.8rem 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #4D6C7A;
+    color: #FFF;
+}
+
+.container-garden-header_logo {
+    display: flex;
+    align-items: center;
+}
+
+.container-garden-header_logo img {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.garden-header-back-button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0 0.2rem;
+    background: #FFF;
+    border-radius: 0.3rem;
+    padding: 0.3rem 0.5rem;
+    color: #4D6C7A;
+    font-weight: 500;
+}
+
+.garden-header-back-button:hover {
+    opacity: 0.9;
+}
+
+.garden-header-back-button .arrow-left {
+    width: 1.3rem;
+    height: 1.3rem;
+}
