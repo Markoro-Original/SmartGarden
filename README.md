@@ -47,6 +47,45 @@ Os dados coletados pelos ESP-32 são sincronizados continuamente com o servidor,
 O sistema tem potencial para integração futura com serviços como previsão do tempo. Além disso, a possibilidade de utilizar funcionalidades de outros dispositivos, como a câmera de um smartphone para análise de imagens de plantas, permitirá recomendações mais abrangentes e informativas sobre os cuidados com as plantas. Essa integração visa tornar o sistema mais completo e útil para os usuários.
 
 
-<div align="center">
-<img src="https://github.com/Markoro-Original/SmartGarden/blob/main/diagramas/Diagrama%20de%20arquitetura.jpg" alt="Logo da Minha Empresa">
-</div>
+### Mqtt Musquitto WSL:
+
+```sh
+sudo apt-get update
+```
+
+```sh
+sudo apt-get upgrade
+``` 
+
+```sh
+sudo apt-get install mosquitto
+```
+
+```sh
+sudo apt-get install mosquitto-clients
+```
+
+    Edite o arquivo /etc/mosquitto/mosquitto.conf e adicione as quatro linhas abaixo ao final do arquivo:
+
+    allow_anonymous true
+    listener 1883 0.0.0.0
+
+    listener 1884
+    protocol websockets
+
+    Em seguida, inicie o servidor Mosquitto executando o comando:
+    mosquitto.
+
+### Arquitetura do projeto:
+
+![Arquitetura](./arquitetura/diagramas/Diagrama%20de%20arquitetura.jpg)
+
+## Diagramas de Sequência:
+
+### Diagrama de Sequência - Login
+
+![Arquitetura](./arquitetura/diagramas/login-fluxo.png)
+
+### Diagrama de Sequência - Esp Update
+
+![Arquitetura](./arquitetura/diagramas/esp-update-fluxo.png)
